@@ -1,0 +1,312 @@
+@font-face {
+  font-family: 'Din';
+  src: url('../webfonts/din-next-lt-w23-regular.ttf');
+}
+@mixin centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin centerAbsolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin clearInput {
+  border: none;
+  background: none;
+  outline: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 32px;
+  direction: rtl;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Din', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+button,
+a {
+  color: #000;
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #999999;
+  height: 300px;
+}
+// variables
+$main: #0c2b4b;
+$second: #5bb12f;
+$white: #ffffff;
+$text: #999999;
+$stroke: #f4f4f4;
+$border: #eee;
+$light_bg: #fafafa;
+$shadow: 0 0 10px rgba(0, 0, 0, .1);
+$transition: all .3s ease-in-out;
+// animations
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+// header
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  position: relative;
+  z-index: 9;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: $shadow;
+    animation: .5s ease-in-out 0s normal none 1 running fadeInDown;
+    .company_info_bar {
+      padding: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  .company_info_bar {
+    background: $main;
+    height: 50px;
+    width: 100%;
+    padding: 12px;
+    .container {
+      @include space-between();
+      height: 100%;
+      padding: 0;
+      .social_media ul {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        a {
+          width: 30px;
+          height: 30px;
+          color: $white;
+          @include centerFlex();
+          border-radius: 50%;
+          border: 1px solid $white;
+          transition: $transition;
+          i {
+            font-size: 14px;
+          }
+          &:hover {
+            background: $white;
+            color: $main;
+          }
+        }
+      }
+      .contact_info ul {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        a {
+          color: $white;
+        }
+        i {
+          color: $white;
+          font-size: 16px;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      height: auto;
+    }
+  }
+  nav {
+    height: 80px;
+    display: flex;
+    padding: 0 12px !important;
+    .logo {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      img {
+        height: 50px;
+      }
+    }
+    .navigation_links {
+      flex: 3;
+      height: 100%;
+      .nav_menu {
+        display: flex;
+        height: 100%;
+        li {
+          flex: 1;
+          @include centerFlex();
+          .nav-link {
+            color: $main;
+            font-size: 16px;
+            transition: $transition;
+            &.active {
+              color: $second;
+            }
+            &:hover {
+              color: $second;
+            }
+          }
+        }
+      }
+      @media (max-width: 992px) {
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        width: 50%;
+        background: #fff;
+        right: -50%;
+        padding: 40px 0;
+        transition: $transition;
+        ul {
+          flex-direction: column;
+          li {
+            max-height: 60px;
+          }
+        }
+        &.show {
+          right: 0;
+        }
+      }
+    }
+    .btns {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 16px;
+      .toggle_menu {
+        width: 26px;
+        height: 26px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: $transition;
+        cursor: pointer;
+        span {
+          display: block;
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          background: $white;
+          border-radius: 20px;
+          opacity: 1;
+          left: 0;
+          transform: rotate(0deg);
+          transition: $transition;
+          &:nth-child(1) {
+            top: 6px;
+          }
+          &:nth-child(2),
+          &:nth-child(3) {
+            top: 12px;
+          }
+          &:nth-child(4) {
+            top: 18px;
+          }
+        }
+        &.open {
+          span {
+            &:nth-child(1) {
+              top: 12px;
+              width: 0%;
+              left: 50%;
+            }
+            &:nth-child(2) {
+              transform: rotate(45deg);
+            }
+            &:nth-child(3) {
+              transform: rotate(-45deg);
+            }
+            &:nth-child(4) {
+              top: 12px;
+              width: 0%;
+              left: 50%;
+            }
+          }
+        }
+      }
+      button {
+        @include clearInput();
+        @include centerFlex();
+        background: $second;
+        border-radius: 4px;
+        width: 42px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: $white;
+        font-size: 16px;
+        &:nth-child(2) {
+          display: none;
+          @media screen and (max-width: 992px) {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+// main
+main {
+  min-height: calc(100vh - 130px);
+}
+// footer
+footer {
+  background-image: linear-gradient(#0c2b4bc7, #0c2b4b),
+    url("../images/footer_bg.jpg");
+  background-size: cover;
+  background-position: top;
+  padding: 150px 0;
+}
