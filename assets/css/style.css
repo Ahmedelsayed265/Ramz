@@ -296,5 +296,72 @@ footer {
   background-image: linear-gradient(rgba(12, 43, 75, 0.7803921569), #0c2b4b), url("../images/footer_bg.jpg");
   background-size: cover;
   background-position: top;
-  padding: 150px 0;
+  padding: 40px 0 0;
+}
+footer .about_company {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .about_company .logo img {
+  height: 80px;
+  filter: brightness(0) invert(1);
+}
+footer .about_company .text p {
+  color: #ffffff;
+  line-height: 26px;
+}
+footer .copy_rights {
+  border-top: 1px solid #ffffff;
+  padding: 28px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 576px) {
+  footer .copy_rights {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+}
+footer .copy_rights p,
+footer .copy_rights a {
+  color: #ffffff;
+}
+footer .copy_rights p {
+  text-align: center;
+}
+@media screen and (max-width: 576px) {
+  footer .copy_rights p {
+    font-size: 12px;
+  }
+}
+footer .copy_rights .social_media ul {
+  display: flex;
+  gap: 12px;
+}
+footer .copy_rights .social_media ul a {
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  transition: 0.2s ease-in-out;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .copy_rights .social_media ul a i {
+  font-size: 14px;
+}
+footer .copy_rights .social_media ul a:hover {
+  background: #0c2b4b;
+  border-color: #0c2b4b;
+  transform: translateY(-2px);
+}
+footer .copy_rights .social_media ul a:hover i {
+  color: #ffffff;
+}
+footer .copy_rights .social_media ul a:hover svg path {
+  fill: #ffffff;
 }/*# sourceMappingURL=style.css.map */

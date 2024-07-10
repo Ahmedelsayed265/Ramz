@@ -308,5 +308,72 @@ footer {
     url("../images/footer_bg.jpg");
   background-size: cover;
   background-position: top;
-  padding: 150px 0;
+  padding: 40px 0 0;
+  .about_company {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .logo {
+      img {
+        height: 80px;
+        filter: brightness(0) invert(1);
+      }
+    }
+    .text {
+      p {
+        color: $white;
+        line-height: 26px;
+      }
+    }
+  }
+  .copy_rights {
+    border-top: 1px solid $white;
+    padding: 28px 0 20px;
+    @include space-between();
+    @media screen and (max-width: 576px) {
+      flex-direction: column-reverse;
+      gap: 12px;
+    }
+    p,
+    a {
+      color: $white;
+    }
+    p {
+      text-align: center;
+      @media screen and (max-width: 576px) {
+        font-size: 12px;
+      }
+    }
+    .social_media {
+      ul {
+        display: flex;
+        gap: 12px;
+        a {
+          border: 1px solid $white;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          transition: 0.2s ease-in-out;
+          color: $white;
+          @include centerFlex();
+          i {
+            font-size: 14px;
+          }
+          &:hover {
+            background: $main;
+            border-color: $main;
+            transform: translateY(-2px);
+            i {
+              color: $white;
+            }
+            svg {
+              path {
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
