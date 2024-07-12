@@ -25,10 +25,27 @@ toggler.addEventListener("click", () => {
 document.addEventListener("click", function (event) {
   if (
     menu.classList.contains("show") &&
-    !event.target.closest(".nav-links") &&
-    !event.target.closest(".toggle_menu")
+    !event.target.closest(".navigation_links") &&
+    !event.target.closest(".toggle_menu") &&
+    !event.target.closest(".dropdown-menu")
   ) {
     menu.classList.remove("show");
     toggler.classList.remove("open");
   }
+});
+
+//aos
+$(document).ready(function () {
+  $("section").each(function () {
+    const sectionDivs = $(this).find("[data-aos]");
+    sectionDivs.each(function (index) {
+      $(this).attr("data-aos-delay", (index + 1) * 100);
+    });
+  });
+  AOS.init({
+    offset: 20,
+    delay: 20,
+    duration: 750,
+    once: true
+  });
 });

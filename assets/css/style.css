@@ -294,6 +294,21 @@ main {
 main .contact {
   padding: 42px 0;
 }
+main .contact .contact_info {
+  padding-inline-end: 12px;
+}
+main .contact .contact_info h3 {
+  color: #0c2b4b;
+  font-size: 24px;
+  font-weight: 600;
+}
+main .contact .contact_info h4 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+  color: #0c2b4b;
+}
 main .contact .branch_row {
   background: #ffffff;
   padding: 16px;
