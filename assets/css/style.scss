@@ -315,10 +315,15 @@ main {
     }
     .contact_info {
       padding-inline-end: 12px;
+      background: $white;
+      background-image: url("../images/bg-pattern-1.png");
+      background-repeat: no-repeat;
+      border-radius: 8px;
+      padding: 24px 16px;
+      height: 100%;
       h3 {
         color: $main;
-        font-size: 24px;
-        font-weight: 600;
+        font-size: 28px;
       }
       h4 {
         display: flex;
@@ -369,38 +374,38 @@ main {
           }
         }
       }
-      form {
-        .input_field {
-          display: flex;
-          flex-direction: column;
-          input,
-          select,
-          textarea {
-            @include clearInput();
-            height: 42px;
-            border-radius: 8px;
-            border: 1px solid $border;
-            color: $text;
-            padding-inline-start: 16px;
-            &::placeholder {
-              color: #bebebe;
-            }
-          }
-          textarea {
-            height: 120px;
-          }
-        }
-        button {
-          @include clearInput();
-          margin-top: 8px;
-          padding: 4px 24px;
-          background: $main;
-          border-radius: 8px;
-          color: $white;
-          font-size: 16px;
-        }
+    }
+  }
+}
+.form {
+  .input_field {
+    display: flex;
+    flex-direction: column;
+    input,
+    select,
+    textarea {
+      @include clearInput();
+      height: 42px;
+      border-radius: 8px;
+      border: 1px solid $border;
+      color: $text;
+      padding-inline-start: 16px;
+      &::placeholder {
+        color: #bebebe;
       }
     }
+    textarea {
+      height: 120px;
+    }
+  }
+  button {
+    @include clearInput();
+    margin-top: 8px;
+    padding: 4px 24px;
+    background: $main;
+    border-radius: 8px;
+    color: $white;
+    font-size: 16px;
   }
 }
 // footer

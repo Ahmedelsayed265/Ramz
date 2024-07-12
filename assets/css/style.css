@@ -310,11 +310,16 @@ main .contact {
 }
 main .contact .contact_info {
   padding-inline-end: 12px;
+  background: #ffffff;
+  background-image: url("../images/bg-pattern-1.png");
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  padding: 24px 16px;
+  height: 100%;
 }
 main .contact .contact_info h3 {
   color: #0c2b4b;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 28px;
 }
 main .contact .contact_info h4 {
   display: flex;
@@ -363,13 +368,14 @@ main .contact .branch_row .about_branch ul li a:hover {
   transition: all 0.3s ease-in-out;
   color: #5bb12f;
 }
-main .contact .branch_row form .input_field {
+
+.form .input_field {
   display: flex;
   flex-direction: column;
 }
-main .contact .branch_row form .input_field input,
-main .contact .branch_row form .input_field select,
-main .contact .branch_row form .input_field textarea {
+.form .input_field input,
+.form .input_field select,
+.form .input_field textarea {
   border: none;
   background: none;
   outline: none;
@@ -379,18 +385,18 @@ main .contact .branch_row form .input_field textarea {
   color: #999999;
   padding-inline-start: 16px;
 }
-main .contact .branch_row form .input_field input::-moz-placeholder, main .contact .branch_row form .input_field select::-moz-placeholder, main .contact .branch_row form .input_field textarea::-moz-placeholder {
+.form .input_field input::-moz-placeholder, .form .input_field select::-moz-placeholder, .form .input_field textarea::-moz-placeholder {
   color: #bebebe;
 }
-main .contact .branch_row form .input_field input::placeholder,
-main .contact .branch_row form .input_field select::placeholder,
-main .contact .branch_row form .input_field textarea::placeholder {
+.form .input_field input::placeholder,
+.form .input_field select::placeholder,
+.form .input_field textarea::placeholder {
   color: #bebebe;
 }
-main .contact .branch_row form .input_field textarea {
+.form .input_field textarea {
   height: 120px;
 }
-main .contact .branch_row form button {
+.form button {
   border: none;
   background: none;
   outline: none;
