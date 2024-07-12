@@ -301,6 +301,51 @@ header {
 // main
 main {
   min-height: calc(100vh - 130px);
+  .contact {
+    padding: 42px 0;
+    .branch_row {
+      background: $white;
+      padding: 16px;
+      border-radius: 8px;
+      iframe {
+        height: 100%;
+        min-height: 250px;
+      }
+      .about_branch {
+        h3 {
+          font-size: 24px;
+          color: $second;
+          margin-bottom: 8px;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            line-height: 24px;
+            color: $text;
+            b {
+              color: $main;
+            }
+            span {
+              display: flex;
+              justify-content: center;
+              width: 26px;
+            }
+            a {
+              line-height: 26px;
+              &:hover {
+                transition: $transition;
+                color: $second;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // footer
 footer {
@@ -345,7 +390,7 @@ footer {
         position: absolute;
         width: 20%;
         height: 3px;
-        background: #5bb12f;
+        background: $white;
         top: 36px;
       }
     }
