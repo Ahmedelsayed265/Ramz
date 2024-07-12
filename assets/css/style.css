@@ -442,6 +442,117 @@ main .sectors .sector_card .inner_card .sector_content p {
 main .sectors .sector_card .inner_card:hover .sector_img img {
   transform: scale(1.15) rotate(-1deg);
 }
+main .sectors .flipCard {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+  perspective: 1000px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+main .sectors .flipCard .cardFront {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-size: cover !important;
+  background-position: top !important;
+  background-repeat: no-repeat !important;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+main .sectors .flipCard .cardFront .content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: auto;
+  gap: 4px;
+}
+main .sectors .flipCard .cardFront .content .title {
+  font-size: 20px;
+  color: #ffffff;
+}
+main .sectors .flipCard .cardFront .time {
+  display: flex;
+  gap: 24px;
+}
+main .sectors .flipCard .cardFront .time p {
+  color: #ffffff;
+  font-size: 14px;
+}
+main .sectors .flipCard .cardFront .time p i {
+  margin-left: 4px;
+}
+main .sectors .flipCard .cardBack {
+  padding: 20px;
+  position: absolute;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+main .sectors .flipCard .cardBack .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+main .sectors .flipCard .cardBack .content .sponser {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+main .sectors .flipCard .cardBack .content img {
+  height: 32px;
+}
+main .sectors .flipCard .cardBack .content h2 {
+  font-size: 18px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: #0c2b4b;
+  font-weight: 600;
+}
+main .sectors .flipCard .cardBack .content h2 img {
+  height: 24px;
+  margin-left: 8px;
+}
+main .sectors .flipCard .cardBack .content p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+  margin: 0;
+}
+main .sectors .flipCard .cardBack .content h6 {
+  margin: 0;
+  font-weight: 600;
+  color: #0c2b4b;
+}
+main .sectors .flipCard .cardBack .content li {
+  line-height: 28px;
+}
+main .sectors .flipCard:hover {
+  z-index: 2;
+}
+main .sectors .flipCard:hover .cardFront {
+  transform: rotateY(-180deg);
+}
+main .sectors .flipCard:hover .cardBack {
+  transform: rotateY(0deg);
+}
 main .jobs {
   padding: 42px 0;
 }
