@@ -4,10 +4,10 @@ let main = document.querySelector("main");
 window.addEventListener("scroll", () => {
   if (this.scrollY > 130) {
     header.classList.add("sticky");
-    main.style.margin = "130px 0 0";
+    main.classList.add("main_fixed");
   } else {
     header.classList.remove("sticky");
-    main.style.margin = "0";
+    main.classList.remove("main_fixed");
   }
 });
 
