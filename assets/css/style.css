@@ -70,6 +70,68 @@ a {
     transform: translateZ(0);
   }
 }
+.accordion-button {
+  box-shadow: none !important;
+  padding: 16px 16px;
+}
+
+.accordion {
+  border: none !important;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: none !important;
+}
+
+.accordion-item {
+  border-radius: 12px !important;
+  overflow: auto;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: #5bb12f;
+}
+
+.accordion-button {
+  text-align: start;
+}
+.accordion-button .form-switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.accordion-button .form-switch input {
+  box-shadow: none !important;
+}
+.accordion-button::after {
+  content: "\f107";
+  font-family: "Font Awesome 6 pro";
+  background-image: none;
+  transform: none !important;
+  margin-left: 0;
+  margin-right: auto;
+}
+.accordion-button:not(.collapsed)::after {
+  content: "\f106";
+  background: none;
+}
+
+.accordion-body {
+  padding: 0 12px 12px;
+}
+.accordion-body p {
+  color: #999999;
+  font-size: 16px;
+}
+.accordion-body p a {
+  color: #5bb12f;
+}
+.accordion-body b {
+  font-size: 14px;
+  color: #0c2b4b;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -300,6 +362,26 @@ main.main_fixed {
     margin-top: 174px;
   }
 }
+main .jobs {
+  padding: 42px 0;
+}
+@media screen and (max-width: 992px) {
+  main .jobs {
+    padding: 32px 0;
+  }
+}
+main .jobs h2 {
+  font-size: 24px;
+  color: #0c2b4b;
+}
+main .jobs p a {
+  color: #5bb12f;
+}
+main .jobs .apply_form {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+}
 main .contact {
   padding: 42px 0;
 }
@@ -384,6 +466,7 @@ main .contact .branch_row .about_branch ul li a:hover {
   border: 1px solid #eee;
   color: #999999;
   padding-inline-start: 16px;
+  padding: 8px;
 }
 .form .input_field input::-moz-placeholder, .form .input_field select::-moz-placeholder, .form .input_field textarea::-moz-placeholder {
   color: #bebebe;

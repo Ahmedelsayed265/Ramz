@@ -93,6 +93,62 @@ $transition: all .3s ease-in-out;
     transform: translateZ(0);
   }
 }
+.accordion-button {
+  box-shadow: none !important;
+  padding: 16px 16px;
+}
+.accordion {
+  border: none !important;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: none !important;
+}
+.accordion-item {
+  border-radius: 12px !important;
+  overflow: auto;
+}
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: $second;
+}
+.accordion-button {
+  text-align: start;
+  .form-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    input {
+      box-shadow: none !important;
+    }
+  }
+  &::after {
+    content: "\f107";
+    font-family: "Font Awesome 6 pro";
+    background-image: none;
+    transform: none !important;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  &:not(.collapsed)::after {
+    content: "\f106";
+    background: none;
+  }
+}
+.accordion-body {
+  padding: 0 12px 12px;
+  p {
+    color: $text;
+    font-size: 16px;
+    a {
+      color: $second;
+    }
+  }
+  b {
+    font-size: 14px;
+    color: $main;
+  }
+}
 // header
 header {
   width: 100%;
@@ -308,6 +364,24 @@ main {
       margin-top: 174px;
     }
   }
+  .jobs {
+    padding: 42px 0;
+    @media screen and (max-width: 992px) {
+      padding: 32px 0;
+    }
+    h2 {
+      font-size: 24px;
+      color: $main;
+    }
+    p  a {
+      color: $second;
+    }
+    .apply_form {
+      background: $white;
+      padding: 16px;
+      border-radius: 8px;
+    }
+  }
   .contact {
     padding: 42px 0;
     @media screen and (max-width: 992px) {
@@ -390,6 +464,7 @@ main {
       border: 1px solid $border;
       color: $text;
       padding-inline-start: 16px;
+      padding: 8px;
       &::placeholder {
         color: #bebebe;
       }
