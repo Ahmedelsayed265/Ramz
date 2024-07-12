@@ -334,6 +334,44 @@ main .contact .branch_row .about_branch ul li a:hover {
   transition: all 0.3s ease-in-out;
   color: #5bb12f;
 }
+main .contact .branch_row form .input_field {
+  display: flex;
+  flex-direction: column;
+}
+main .contact .branch_row form .input_field input,
+main .contact .branch_row form .input_field select,
+main .contact .branch_row form .input_field textarea {
+  border: none;
+  background: none;
+  outline: none;
+  height: 42px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  color: #999999;
+  padding-inline-start: 16px;
+}
+main .contact .branch_row form .input_field input::-moz-placeholder, main .contact .branch_row form .input_field select::-moz-placeholder, main .contact .branch_row form .input_field textarea::-moz-placeholder {
+  color: #bebebe;
+}
+main .contact .branch_row form .input_field input::placeholder,
+main .contact .branch_row form .input_field select::placeholder,
+main .contact .branch_row form .input_field textarea::placeholder {
+  color: #bebebe;
+}
+main .contact .branch_row form .input_field textarea {
+  height: 120px;
+}
+main .contact .branch_row form button {
+  border: none;
+  background: none;
+  outline: none;
+  margin-top: 8px;
+  padding: 4px 24px;
+  background: #0c2b4b;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+}
 
 footer {
   background-image: linear-gradient(rgba(12, 43, 75, 0.8509803922), #0c2b4b), url("../images/footer_bg.jpg");
