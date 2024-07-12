@@ -304,7 +304,7 @@ main {
 }
 // footer
 footer {
-  background-image: linear-gradient(#0c2b4bc7, #0c2b4b),
+  background-image: linear-gradient(#0c2b4bd9, #0c2b4b),
     url("../images/footer_bg.jpg");
   background-size: cover;
   background-position: top;
@@ -321,13 +321,76 @@ footer {
     }
     .text {
       p {
-        color: $white;
+        color: #bebebe;
+        font-size: 14px;
+        margin-inline-end: 40px;
         line-height: 26px;
+        @media screen and (max-width: 576px) {
+          margin-inline-end: 0;
+        }
+      }
+    }
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    h3 {
+      color: $white;
+      position: relative;
+      margin-bottom: 14px;
+      font-size: 22px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20%;
+        height: 3px;
+        background: #5bb12f;
+        top: 36px;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      li {
+        line-height: 24px;
+        i {
+          margin-top: 4px;
+          margin-inline-end: 4px;
+          font-size: 18px;
+        }
+        p {
+          line-height: 24px;
+        }
+        a {
+          display: flex;
+          gap: 4px;
+          color: #bebebe;
+          transition: 0.2s ease-in-out;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+      .footer_post {
+        display: flex;
+        gap: 12px;
+        .img {
+          aspect-ratio: 3 / 2;
+          max-width: 80px;
+          img {
+            object-fit: fill;
+            height: 100%;
+            width: 100%;
+            border-radius: 4px;
+          }
+        }
       }
     }
   }
   .copy_rights {
-    border-top: 1px solid $white;
+    border-top: 1px solid #bebebe;
     padding: 28px 0 20px;
     @include space-between();
     @media screen and (max-width: 576px) {
@@ -336,7 +399,7 @@ footer {
     }
     p,
     a {
-      color: $white;
+      color: #bebebe;
     }
     p {
       text-align: center;
@@ -349,12 +412,12 @@ footer {
         display: flex;
         gap: 12px;
         a {
-          border: 1px solid $white;
+          border: 1px solid #bebebe;
           border-radius: 50%;
           width: 32px;
           height: 32px;
           transition: 0.2s ease-in-out;
-          color: $white;
+          color: #bebebe;
           @include centerFlex();
           i {
             font-size: 14px;

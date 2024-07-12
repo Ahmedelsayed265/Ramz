@@ -293,7 +293,7 @@ main {
 }
 
 footer {
-  background-image: linear-gradient(rgba(12, 43, 75, 0.7803921569), #0c2b4b), url("../images/footer_bg.jpg");
+  background-image: linear-gradient(rgba(12, 43, 75, 0.8509803922), #0c2b4b), url("../images/footer_bg.jpg");
   background-size: cover;
   background-position: top;
   padding: 40px 0 0;
@@ -308,11 +308,77 @@ footer .about_company .logo img {
   filter: brightness(0) invert(1);
 }
 footer .about_company .text p {
-  color: #ffffff;
+  color: #bebebe;
+  font-size: 14px;
+  margin-inline-end: 40px;
   line-height: 26px;
 }
+@media screen and (max-width: 576px) {
+  footer .about_company .text p {
+    margin-inline-end: 0;
+  }
+}
+footer .col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .col h3 {
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 14px;
+  font-size: 22px;
+}
+footer .col h3::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 3px;
+  background: #5bb12f;
+  top: 36px;
+}
+footer .col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+footer .col ul li {
+  line-height: 24px;
+}
+footer .col ul li i {
+  margin-top: 4px;
+  margin-inline-end: 4px;
+  font-size: 18px;
+}
+footer .col ul li p {
+  line-height: 24px;
+}
+footer .col ul li a {
+  display: flex;
+  gap: 4px;
+  color: #bebebe;
+  transition: 0.2s ease-in-out;
+}
+footer .col ul li a:hover {
+  color: #ffffff;
+}
+footer .col ul .footer_post {
+  display: flex;
+  gap: 12px;
+}
+footer .col ul .footer_post .img {
+  aspect-ratio: 3/2;
+  max-width: 80px;
+}
+footer .col ul .footer_post .img img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+}
 footer .copy_rights {
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid #bebebe;
   padding: 28px 0 20px;
   display: flex;
   align-items: center;
@@ -326,7 +392,7 @@ footer .copy_rights {
 }
 footer .copy_rights p,
 footer .copy_rights a {
-  color: #ffffff;
+  color: #bebebe;
 }
 footer .copy_rights p {
   text-align: center;
@@ -341,12 +407,12 @@ footer .copy_rights .social_media ul {
   gap: 12px;
 }
 footer .copy_rights .social_media ul a {
-  border: 1px solid #ffffff;
+  border: 1px solid #bebebe;
   border-radius: 50%;
   width: 32px;
   height: 32px;
   transition: 0.2s ease-in-out;
-  color: #ffffff;
+  color: #bebebe;
   display: flex;
   align-items: center;
   justify-content: center;
