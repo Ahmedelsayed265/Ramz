@@ -50,6 +50,22 @@ a {
   height: 300px;
 }
 
+.filepond--credits {
+  display: none !important;
+}
+
+.filepond--file {
+  direction: ltr !important;
+}
+
+.filepond--root {
+  margin: 0;
+}
+
+.filepond--drop-label.filepond--drop-label label {
+  font-size: 14px;
+}
+
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -362,6 +378,70 @@ main.main_fixed {
     margin-top: 174px;
   }
 }
+main .sectors {
+  padding: 42px 0;
+}
+@media screen and (max-width: 992px) {
+  main .sectors {
+    padding: 32px 0;
+  }
+}
+main .sectors h1 {
+  font-size: 28px;
+  text-align: center;
+  color: #0c2b4b;
+  margin-bottom: 4px;
+}
+main .sectors p {
+  text-align: center;
+}
+main .sectors .sector_card {
+  width: 100%;
+}
+main .sectors .sector_card .inner_card {
+  border-radius: 16px;
+  overflow: hidden !important;
+  position: relative;
+}
+main .sectors .sector_card .inner_card .sector_img {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+main .sectors .sector_card .inner_card .sector_img img {
+  display: block;
+  transform: scale(1.1);
+  transition: all 0.4s ease;
+  width: 100%;
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .sectors .sector_card .inner_card .sector_content {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.4s ease;
+  border-radius: 16px;
+  padding: 24px;
+  background: linear-gradient(180deg, #0c2b4b, rgba(12, 43, 75, 0.4352941176));
+}
+main .sectors .sector_card .inner_card .sector_content h4 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+main .sectors .sector_card .inner_card .sector_content p {
+  text-align: start;
+  color: #ffffff;
+  font-size: 14px;
+}
+main .sectors .sector_card .inner_card:hover .sector_img img {
+  transform: scale(1.15) rotate(-1deg);
+}
 main .jobs {
   padding: 42px 0;
 }
@@ -370,7 +450,7 @@ main .jobs {
     padding: 32px 0;
   }
 }
-main .jobs h2 {
+main .jobs h1 {
   font-size: 24px;
   color: #0c2b4b;
 }

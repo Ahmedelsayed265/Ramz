@@ -146,7 +146,7 @@
             <div class="container">
                 <div class="row m-0 justify-content-center flex-column">
                     <div class="col-lg-8 col-12 p-2">
-                        <h2 data-aos="fade-up">انضم لفريق عمل رمز: مستقبل مهني مشرق ينتظرك</h2>
+                        <h1 data-aos="fade-up">انضم لفريق عمل رمز: مستقبل مهني مشرق ينتظرك</h1>
                         <p data-aos="fade-up">
                             اننا في بحث دائما لاستقطاب الموظف الصحيح كي يلتحق بفريق العمل لدينا حيث نقدم عروض توظيف تتسم
                             بالجاذبية لحديثي التخرج والمهندسين المحترفين مع توفير افق رائع للتطور المهني .
@@ -292,6 +292,9 @@
                                             <label for="message">إضافة التفاصيل الخاصة بك</label>
                                             <textarea name="message" id="message" placeholder="رسالتك"></textarea>
                                         </div>
+                                    </div>
+                                    <div class="col-12 p-2">
+                                        <input type="file" name="" id="" class="filepond-multiple">
                                     </div>
                                     <div class="col-12 d-flex justify-content-end p-2">
                                         <button type="submit">ارسال <i class="fa-sharp fa-regular fa-paper-plane"></i>
@@ -445,6 +448,14 @@
     <!-- js -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+        $(".filepond-multiple").filepond({
+            allowMultiple: false,
+        });
+        $(document).ready(function () {
+            $('select').niceSelect();
+        });
+    </script>
 </body>
 
 </html>

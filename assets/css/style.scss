@@ -62,6 +62,18 @@ a {
   background: #999999;
   height: 300px;
 }
+.filepond--credits {
+  display: none !important;
+}
+.filepond--file {
+  direction: ltr !important;
+}
+.filepond--root {
+  margin: 0;
+}
+.filepond--drop-label.filepond--drop-label label {
+  font-size: 14px;
+}
 // variables
 $main: #0c2b4b;
 $second: #5bb12f;
@@ -364,12 +376,75 @@ main {
       margin-top: 174px;
     }
   }
+  .sectors {
+    padding: 42px 0;
+    @media screen and (max-width: 992px) {
+      padding: 32px 0;
+    }
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      color: $main;
+      margin-bottom: 4px;
+    }
+    p {
+      text-align: center;
+    }
+    .sector_card {
+      width: 100%;
+      .inner_card {
+        border-radius: 16px;
+        overflow: hidden !important;
+        position: relative;
+        .sector_img {
+          position: relative;
+          width: 100%;
+          border-radius: 16px;
+          overflow: hidden;
+          img {
+            display: block;
+            transform: scale(1.1);
+            transition: all 0.4s ease;
+            width: 100%;
+            aspect-ratio: 3 / 2;
+            object-fit: cover;
+          }
+        }
+        .sector_content {
+          bottom: 0;
+          right: 0;
+          position: absolute;
+          left: 0;
+          top: 0;
+          transition: all 0.4s ease;
+          border-radius: 16px;
+          padding: 24px;
+          background: linear-gradient( 180deg ,#0c2b4b, #0c2b4b6f);
+          h4 {
+            font-size: 18px;
+            color: $white;
+            margin-bottom: 4px;
+          }
+          p {
+            text-align: start;
+            color: $white;
+            font-size: 14px;
+          }
+        }
+        &:hover {
+          .sector_img img {
+            transform: scale(1.15) rotate(-1deg);
+          }
+        }
+      }
+    }
+  }
   .jobs {
     padding: 42px 0;
     @media screen and (max-width: 992px) {
       padding: 32px 0;
     }
-    h2 {
+    h1 {
       font-size: 24px;
       color: $main;
     }
