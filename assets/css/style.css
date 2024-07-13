@@ -401,6 +401,11 @@ main .about .info {
 main .about .info p {
   text-align: justify;
 }
+@media screen and (max-width: 992px) {
+  main .about .info {
+    padding: 16px 0;
+  }
+}
 main .about .info .statistic {
   padding: 8px 0;
   display: flex;

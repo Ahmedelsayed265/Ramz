@@ -396,6 +396,9 @@ main {
         text-align: justify;
       }
       padding: 24px;
+      @media screen and (max-width: 992px) {
+        padding: 16px 0;
+      }
       .statistic {
         padding: 8px 0;
         display: flex;
