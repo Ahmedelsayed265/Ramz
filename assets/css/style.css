@@ -50,6 +50,10 @@ a {
   height: 300px;
 }
 
+:target {
+  scroll-margin-top: 100px;
+}
+
 .filepond--credits {
   display: none !important;
 }
@@ -255,15 +259,15 @@ header nav .navigation_links .nav_menu li {
   align-items: center;
   justify-content: center;
 }
-header nav .navigation_links .nav_menu li .nav-link {
+header nav .navigation_links .nav_menu li a {
   color: #0c2b4b;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
 }
-header nav .navigation_links .nav_menu li .nav-link.active {
+header nav .navigation_links .nav_menu li a.active {
   color: #5bb12f;
 }
-header nav .navigation_links .nav_menu li .nav-link:hover {
+header nav .navigation_links .nav_menu li a:hover {
   color: #5bb12f;
 }
 @media (max-width: 992px) {
@@ -377,6 +381,59 @@ main.main_fixed {
   main.main_fixed {
     margin-top: 174px;
   }
+}
+main .services {
+  padding: 42px 0;
+}
+@media screen and (max-width: 992px) {
+  main .services {
+    padding: 32px 0;
+  }
+}
+main .services h1 {
+  font-size: 28px;
+  text-align: center;
+  color: #0c2b4b;
+  margin-bottom: 4px;
+}
+main .services p {
+  text-align: center;
+}
+main .services .about_service h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #0c2b4b;
+}
+main .services .about_service p {
+  text-align: start;
+  line-height: 24px;
+}
+main .services .about_service ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+main .services .about_service ul li {
+  margin-inline-end: 8px;
+  line-height: 24px;
+  color: #0c2b4b;
+}
+main .services .swiper {
+  height: 100%;
+}
+main .services .swiper .swiper-slide {
+  height: 100%;
+  border-radius: 16px;
+}
+main .services .swiper .swiper-slide img {
+  border-radius: 16px;
+  width: 100%;
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .sectors {
   padding: 42px 0;

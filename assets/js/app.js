@@ -49,3 +49,11 @@ $(document).ready(function () {
     once: true
   });
 });
+
+var swiper = new Swiper(".mySwiper", {
+  loop: true,
+  autplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  }
+});
