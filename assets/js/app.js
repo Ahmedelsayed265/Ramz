@@ -52,8 +52,9 @@ $(document).ready(function () {
 
 var swiper = new Swiper(".mySwiper", {
   loop: true,
-  autplay: {
-    delay: 2500,
+  speed: 1000,
+  autoplay: {
+    delay: 3000,
     disableOnInteraction: false
   }
 });
