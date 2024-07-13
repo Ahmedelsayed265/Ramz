@@ -382,6 +382,49 @@ main.main_fixed {
     margin-top: 174px;
   }
 }
+main .companies {
+  padding: 42px 0;
+}
+@media screen and (max-width: 992px) {
+  main .companies {
+    padding: 32px 0;
+  }
+}
+main .companies .img {
+  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+          clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+main .companies .img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .companies h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #0c2b4b;
+}
+main .companies p {
+  text-align: justify;
+  line-height: 24px;
+}
+main .companies ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+main .companies ul li {
+  margin-inline-end: 8px;
+  line-height: 24px;
+  color: #0c2b4b;
+}
 main .about {
   padding: 42px 0;
 }
@@ -405,6 +448,17 @@ main .about .info p {
   main .about .info {
     padding: 16px 0;
   }
+}
+main .about .info a {
+  color: #5bb12f;
+  border: 1px solid #5bb12f;
+  padding: 12px 32px;
+  border-radius: 40px;
+  transition: all 0.3s ease-in-out;
+}
+main .about .info a:hover {
+  background: #5bb12f;
+  color: #ffffff;
 }
 main .about .info .statistic {
   padding: 8px 0;
