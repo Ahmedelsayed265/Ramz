@@ -382,6 +382,125 @@ main.main_fixed {
     margin-top: 174px;
   }
 }
+main .about {
+  padding: 42px 0;
+}
+@media screen and (max-width: 992px) {
+  main .about {
+    padding: 32px 0;
+  }
+}
+main .about .title {
+  font-weight: bold;
+  color: #0c2b4b;
+  font-size: 24px;
+}
+main .about .info {
+  padding: 24px;
+}
+main .about .info .statistic {
+  padding: 8px 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+main .about .info .statistic .counterUp {
+  font-weight: bold;
+  font-size: 100px;
+  background: rgba(167, 169, 172, 0.062745098);
+  background-size: contain;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-stroke: 1px #a7a9ac;
+  font-family: "Manrope Alt", Sans-serif;
+}
+@media (max-width: 768px) {
+  main .about .info .statistic .counterUp {
+    font-size: 70px;
+  }
+}
+main .about .info .statistic h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+  max-height: 100px;
+  text-align: center;
+  transform: scaleX(-1) scaleY(-1);
+}
+main .about .row:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+main .about .lazyImg {
+  position: relative;
+  height: 100%;
+}
+main .about .lazyImg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border: 10px solid #f4f4f4;
+  width: 100%;
+  height: 90%;
+  transform: translateY(-50%);
+}
+main .about .lazyImg .lazyDiv {
+  height: 100%;
+  margin: auto;
+}
+main .about .lazyImg .lazyDiv .simpleParallax {
+  height: 100%;
+}
+main .about .lazyImg .lazyDiv img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 85%;
+  -o-object-position: top;
+     object-position: top;
+}
+main .about .about_card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  height: 100%;
+}
+main .about .about_card p {
+  line-height: 24px;
+  color: #999999;
+  margin: 0;
+  font-size: 14px;
+}
+main .about .about_card .img-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+main .about .about_card .img-title img {
+  height: 42px;
+}
+main .about .about_card .img-title h3 {
+  margin: 0;
+  font-size: 28px;
+  color: #5bb12f;
+}
+main .about .about_card .image {
+  width: 100%;
+  height: 100%;
+}
+main .about .about_card .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
 main .services {
   padding: 42px 0;
 }
@@ -408,7 +527,7 @@ main .services .about_service h3 {
   color: #0c2b4b;
 }
 main .services .about_service p {
-  text-align: start;
+  text-align: justify;
   line-height: 24px;
 }
 main .services .about_service ul {

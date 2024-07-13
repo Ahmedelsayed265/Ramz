@@ -381,6 +381,118 @@ main {
       margin-top: 174px;
     }
   }
+  .about {
+    padding: 42px 0;
+    @media screen and (max-width: 992px) {
+      padding: 32px 0;
+    }
+    .title {
+      font-weight: bold;
+      color: $main;
+      font-size: 24px;
+    }
+    .info {
+      padding: 24px;
+      .statistic {
+        padding: 8px 0;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: flex-end;
+        .counterUp {
+          font-weight: bold;
+          font-size: 100px;
+          background: #a7a9ac10;
+          background-size: contain;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          -webkit-text-stroke: 1px #a7a9ac;
+          font-family: "Manrope Alt", Sans-serif;
+          @media (max-width: 768px) {
+            font-size: 70px;
+          }
+        }
+        h6 {
+          font-weight: bold;
+          text-transform: uppercase;
+          writing-mode: vertical-rl;
+          max-height: 100px;
+          text-align: center;
+          transform: scaleX(-1) scaleY(-1);
+        }
+      }
+    }
+    .row {
+      &:nth-child(2n) {
+        flex-direction: row-reverse;
+      }
+    }
+    .lazyImg {
+      position: relative;
+      height: 100%;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        border: 10px solid $stroke;
+        width: 100%;
+        height: 90%;
+        transform: translateY(-50%);
+      }
+      .lazyDiv {
+        height: 100%;
+        margin: auto;
+        .simpleParallax {
+          height: 100%;
+        }
+        img {
+          width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          height: 85%;
+          object-position: top;
+        }
+      }
+    }
+    .about_card {
+      background: $white;
+      border-radius: 16px;
+      padding: 24px;
+      height: 100%;
+      p {
+        line-height: 24px;
+        color: $text;
+        margin: 0;
+        font-size: 14px;
+      }
+      .img-title {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        align-items: center;
+        margin-bottom: 12px;
+        img {
+          height: 42px;
+        }
+        h3 {
+          margin: 0;
+          font-size: 28px;
+          color: $second;
+        }
+      }
+      .image{
+        width: 100%;
+        height: 100%;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
   .services {
     padding: 42px 0;
     @media screen and (max-width: 992px) {
@@ -405,7 +517,7 @@ main {
         color: $main;
       }
       p {
-        text-align: start;
+        text-align: justify;
         line-height: 24px;
       }
       ul {

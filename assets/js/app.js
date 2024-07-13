@@ -49,7 +49,7 @@ $(document).ready(function () {
     once: true
   });
 });
-
+//swiper
 var swiper = new Swiper(".mySwiper", {
   loop: true,
   speed: 1000,
@@ -58,4 +58,12 @@ var swiper = new Swiper(".mySwiper", {
     delay: 3000,
     disableOnInteraction: false
   }
+});
+$(document).ready(function () {
+  // parallax
+  var parallaxImage = document.getElementsByClassName("parallax");
+  new simpleParallax(parallaxImage, {
+    delay: 1,
+    transition: "cubic-bezier(0,0,0,1)"
+  });
 });
