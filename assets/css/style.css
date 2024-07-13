@@ -259,15 +259,15 @@ header nav .navigation_links .nav_menu li {
   align-items: center;
   justify-content: center;
 }
-header nav .navigation_links .nav_menu li a {
+header nav .navigation_links .nav_menu li .nav-link {
   color: #0c2b4b;
   font-size: 16px;
   transition: all 0.3s ease-in-out;
 }
-header nav .navigation_links .nav_menu li a.active {
+header nav .navigation_links .nav_menu a.active {
   color: #5bb12f;
 }
-header nav .navigation_links .nav_menu li a:hover {
+header nav .navigation_links .nav_menu a:hover {
   color: #5bb12f;
 }
 @media (max-width: 992px) {

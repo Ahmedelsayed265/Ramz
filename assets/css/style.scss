@@ -257,16 +257,18 @@ header {
         li {
           flex: 1;
           @include centerFlex();
-          a {
+          .nav-link {
             color: $main;
             font-size: 16px;
             transition: $transition;
-            &.active {
-              color: $second;
-            }
-            &:hover {
-              color: $second;
-            }
+          }
+        }
+        a {
+          &.active {
+            color: $second;
+          }
+          &:hover {
+            color: $second;
           }
         }
       }
