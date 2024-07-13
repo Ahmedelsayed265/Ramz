@@ -398,6 +398,9 @@ main .about .title {
 main .about .info {
   padding: 24px;
 }
+main .about .info p {
+  text-align: justify;
+}
 main .about .info .statistic {
   padding: 8px 0;
   display: flex;
@@ -469,6 +472,7 @@ main .about .about_card {
   height: 100%;
 }
 main .about .about_card p {
+  text-align: justify;
   line-height: 24px;
   color: #999999;
   margin: 0;
@@ -500,6 +504,7 @@ main .about .about_card .image img {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  border-radius: 8px;
 }
 main .services {
   padding: 42px 0;
