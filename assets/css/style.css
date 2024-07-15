@@ -541,6 +541,7 @@ main .hero_section .swiperControl .swiper-button-next {
 }
 main .consultants_home {
   padding: 42px 0;
+  background: #ffffff;
 }
 main .consultants_home .value {
   padding: 24px;
@@ -650,8 +651,74 @@ main .latest_projects .loadMore:hover {
   background-color: #0c2b4b;
   color: #ffffff;
 }
+main .latest_posts {
+  background-color: #f6fafe;
+  background-image: url("../images/cta-box-bg.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 60px 0;
+}
+main .latest_posts h2 {
+  font-size: 42px;
+  margin-bottom: 32px;
+  color: #0c2b4b;
+  text-align: center;
+}
+main .latest_posts .post {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main .latest_posts .post .img {
+  aspect-ratio: 3/2;
+}
+main .latest_posts .post .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+main .latest_posts .post .content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+main .latest_posts .post .content h6 {
+  font-size: 18px;
+  color: #0c2b4b;
+  font-weight: bold;
+  margin: 0;
+}
+main .latest_posts .post .content p {
+  font-size: 14px;
+  color: #999999;
+  line-height: 24px;
+  margin: 0;
+}
+main .latest_posts .post .content hr {
+  margin: 8px 0;
+}
+main .latest_posts .post .content ul li {
+  color: #999999;
+  font-size: 14px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+main .latest_posts .post .content ul li i {
+  color: #0c2b4b;
+  width: 24px;
+}
 main .clients {
   padding: 42px 0;
+  background: #ffffff;
 }
 main .clients h2 {
   font-size: 42px;
