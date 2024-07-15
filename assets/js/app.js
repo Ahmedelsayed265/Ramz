@@ -53,6 +53,7 @@ $(document).ready(function () {
 var swiper = new Swiper(".mySwiper", {
   loop: true,
   speed: 1000,
+  effect: "fade",
   spaceBetween: 16,
   autoplay: {
     delay: 3000,
@@ -105,5 +106,5 @@ var clientsSlider = new Swiper(".clientsSlider", {
       slidesPerView: 6
     }
   },
-  spaceBetween: 16,
+  spaceBetween: 16
 });

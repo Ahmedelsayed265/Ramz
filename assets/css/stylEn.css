@@ -614,7 +614,7 @@ main .consultants_home .value:hover .img img {
   transform: scale(1.04) rotate(-2deg);
 }
 main .latest_projects {
-  background-color: #ffffff;
+  background-color: #f6fafe;
   background-image: url("../images/our-service-bg.png");
   background-position: top right;
   background-repeat: no-repeat;
@@ -874,6 +874,18 @@ main .services h1 {
 main .services p {
   text-align: center;
 }
+main .services .about_service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-inline-end: 24px;
+}
+@media screen and (max-width: 992px) {
+  main .services .about_service {
+    padding-inline-end: 0;
+  }
+}
 main .services .about_service h3 {
   display: flex;
   align-items: center;
@@ -910,6 +922,71 @@ main .services .swiper .swiper-slide img {
   aspect-ratio: 3/2;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main .inner_services {
+  padding: 42px 0;
+  background: #ffffff;
+}
+main .inner_services h3 {
+  text-align: center;
+  color: #0c2b4b;
+  margin-bottom: 24px;
+}
+main .inner_services .service_contains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  main .inner_services .service_contains {
+    gap: 8px;
+  }
+}
+main .inner_services .service_contains .service {
+  padding: 24px 16px;
+  flex: 1;
+  border: 1px dashed #d6d6d6;
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+main .inner_services .service_contains .service h6 {
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+main .inner_services .service_contains .service h6 span {
+  font-size: 48px;
+  color: #fafafa;
+  font-weight: 800;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #e7e7e7;
+  transition: all 0.3s ease-in-out;
+}
+main .inner_services .service_contains .service p {
+  font-size: 14px;
+  line-height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+main .inner_services .service_contains .service:hover {
+  border-color: transparent;
+  background-color: #5bb12f;
+  transform: translateY(-5px);
+}
+main .inner_services .service_contains .service:hover h6 {
+  color: white;
+}
+main .inner_services .service_contains .service:hover h6 span {
+  color: #5bb12f;
+  -webkit-text-stroke-color: #ffffff;
+}
+main .inner_services .service_contains .service:hover p {
+  color: white;
 }
 main .sectors {
   padding: 42px 0;

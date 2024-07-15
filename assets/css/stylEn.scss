@@ -605,7 +605,7 @@ main {
     }
   }
   .latest_projects {
-    background-color: $white;
+    background-color: $main5;
     background-image: url('../images/our-service-bg.png');
     background-position: top right;
     background-repeat: no-repeat;
@@ -861,6 +861,14 @@ main {
       text-align: center;
     }
     .about_service {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding-inline-end: 24px;
+      @media screen and (max-width: 992px) {
+        padding-inline-end: 0;
+      }
       h3 {
         display: flex;
         align-items: center;
@@ -895,6 +903,69 @@ main {
           width: 100%;
           aspect-ratio: 3 / 2;
           object-fit: cover;
+        }
+      }
+    }
+  }
+  .inner_services {
+    padding: 42px 0;
+    background: $white;
+    h3 {
+      text-align: center;
+      color: $main;
+      margin-bottom: 24px;
+    }
+    .service_contains {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      @media screen and (max-width: 768px) {
+        gap: 8px;
+      }
+      .service {
+        padding: 24px 16px;
+        flex: 1;
+        border: 1px dashed #d6d6d6;
+        display: flex;
+        flex-direction: column;
+        min-width: 250px;
+        border-radius: 12px;
+        transition: $transition;
+        h6 {
+          transition: $transition;
+          margin-bottom: 0;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          span {
+            font-size: 48px;
+            color: #fafafa;
+            font-weight: 800;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #e7e7e7;
+            transition: $transition;
+          }
+        }
+        p {
+          font-size: 14px;
+          line-height: 24px;
+          transition: $transition;
+        }
+        &:hover {
+          border-color: transparent;
+          background-color: $second;
+          transform: translateY(-5px);
+          h6 {
+            color: white;
+            span {
+              color: $second;
+              -webkit-text-stroke-color: $white;
+            }
+          }
+          p {
+            color: white;
+          }
         }
       }
     }
